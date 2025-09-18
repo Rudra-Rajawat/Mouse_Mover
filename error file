@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "c:\React\MMover\m_move.py", line 18, in <module>
+    pyautogui.moveTo(new_x, new_y, duration=0.5)
+  File "C:\Users\2380279\AppData\Roaming\Python\Python312\site-packages\pyautogui\__init__.py", line 593, in wrapper
+    failSafeCheck()
+  File "C:\Users\2380279\AppData\Roaming\Python\Python312\site-packages\pyautogui\__init__.py", line 1734, in failSafeCheck
+    raise FailSafeException(
+pyautogui.FailSafeException: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
