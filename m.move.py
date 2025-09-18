@@ -1,6 +1,5 @@
 # pip install pyautogui
 
-
 import pyautogui
 import time
 import random
@@ -12,12 +11,14 @@ try:
         # Get the current screen size
         screen_width, screen_height = pyautogui.size()
 
-        # Generate random coordinates within the screen boundaries
-        new_x = random.randint(0, screen_width)
-        new_y = random.randint(0, screen_height)
+        # Generate random coordinates, avoiding the corners
+        # We use a margin of 10 pixels from the edges
+        x_margin = 10
+        y_margin = 10
+        new_x = random.randint(x_margin, screen_width - x_margin)
+        new_y = random.randint(y_margin, screen_height - y_margin)
 
         # Move the mouse to the new random coordinates
-        # The 'duration' argument makes the movement smooth
         pyautogui.moveTo(new_x, new_y, duration=0.5)
 
         # Wait for 60 seconds (1 minute)
